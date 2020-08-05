@@ -7,4 +7,8 @@ Get dropdown menu's easily
 
 #How to use it
 
-`import {DropDown} from 'drop_down'`
+```import {DropDown} from 'drop_down'
+
+DropDown.init()
+
+```

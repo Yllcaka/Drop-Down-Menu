@@ -8,27 +8,28 @@ const DropDown = (() => {
       event.preventDefault();
     });
     drop.addEventListener("mouseover", () => {
-      dropDown.style.display = "block";
+      dropDownContainer[index].classList.add("visible");
       console.log(dropDownContainer[index]);
     });
     drop.addEventListener("mouseout", () => {
-      dropDown.style.display = "block";
+      dropDownContainer[index].classList.remove("visible");
       console.log(dropDownContainer[index]);
     });
   };
   const onClick = (drop, index) => {
     drop.addEventListener("click", () => {
       event.preventDefault();
-      shown = dropDownContainer[index].style.display == "block";
-      dropDownContainer[index].style.display = shown ? "none" : "block";
+      dropDownContainer[index].classList.toggle("visible");
       console.log(dropDownContainer[index]);
     });
   };
-  dropDowns.forEach((dropDown, index) => {
-    dropDown.style.display = "none";
-    if (dropDown.classList.contains("hover")) onHover(dropDown, index);
-    else onClick(dropDown, index);
-  });
+  const init = () => {
+    dropDowns.forEach((dropDown, index) => {
+      if (dropDown.classList.contains("hover")) onHover(dropDown, index);
+      else onClick(dropDown, index);
+    });
+  };
+  return { init };
 })();
 
 export { DropDown };

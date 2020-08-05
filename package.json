@@ -1,5 +1,5 @@
 {
-  "name": "drop_down",
+  "name": "drop_down_made_easy",
   "version": "1.0.0",
   "description": "Get dropdown menus easily",
   "main": "index.js",
@@ -10,6 +10,10 @@
     "type": "git",
     "url": "git+https://github.com/Yllcaka/Drop-Down-Menu.git"
   },
+  "keywords": [
+    "drop",
+    "down"
+  ],
   "author": "Ylli Caka",
   "license": "ISC",
   "bugs": {
